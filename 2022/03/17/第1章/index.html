@@ -16,15 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第1章——收益  本章重点：  囚徒困境 严格占优策略 四个重要的lessons   Game1——绩点博弈 游戏规则介绍： 两名玩家进行博弈，每人均有两种策略，\(\alpha\)（内卷）或\(\beta\)（躺平），收益矩阵如下：     \(\alpha\) \(\beta\)     \(\alpha\) B-, B- A, C   \(">
+    <meta name="description" content="第1章——收益  本章重点：  收益矩阵 囚徒困境 严格占优策略 四个重要的lessons   收益矩阵 根据博弈中两个玩家的策略，我们可以列出一个表格，表格的每行表示玩家1的一个策略，每列表示玩家2的一个策略。每个单元格中记录两个数字，代表玩家1，2在某种策略选择下的收益。第一个表示玩家1的收益，第二个表示玩家2的收益。  示例：     \(\alpha\)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博弈论:第1章——收益">
 <meta property="og:url" content="https://qi-z.top/2022/03/17/%E7%AC%AC1%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Q&#39;s Blog">
-<meta property="og:description" content="第1章——收益  本章重点：  囚徒困境 严格占优策略 四个重要的lessons   Game1——绩点博弈 游戏规则介绍： 两名玩家进行博弈，每人均有两种策略，\(\alpha\)（内卷）或\(\beta\)（躺平），收益矩阵如下：     \(\alpha\) \(\beta\)     \(\alpha\) B-, B- A, C   \(">
+<meta property="og:description" content="第1章——收益  本章重点：  收益矩阵 囚徒困境 严格占优策略 四个重要的lessons   收益矩阵 根据博弈中两个玩家的策略，我们可以列出一个表格，表格的每行表示玩家1的一个策略，每列表示玩家2的一个策略。每个单元格中记录两个数字，代表玩家1，2在某种策略选择下的收益。第一个表示玩家1的收益，第二个表示玩家2的收益。  示例：     \(\alpha\)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-17T12:55:03.312Z">
-<meta property="article:modified_time" content="2022-03-17T13:27:20.236Z">
+<meta property="article:modified_time" content="2022-03-21T03:58:41.198Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="博弈论">
 <meta name="twitter:card" content="summary_large_image">
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.4k 字
+      2.7k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20 分钟
+      23 分钟
     </span>
   
 
@@ -254,10 +254,38 @@
 <blockquote>
 <p><strong>本章重点</strong>：</p>
 <ul>
+<li>收益矩阵</li>
 <li>囚徒困境</li>
 <li>严格占优策略</li>
 <li>四个重要的lessons</li>
 </ul>
+</blockquote>
+<h2 id="收益矩阵">收益矩阵</h2>
+<p>根据博弈中两个玩家的策略，我们可以列出一个表格，表格的每行表示玩家1的一个策略，每列表示玩家2的一个策略。每个单元格中记录两个数字，代表玩家1，2在某种策略选择下的收益。第一个表示玩家1的收益，第二个表示玩家2的收益。</p>
+<blockquote>
+<p>示例：</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(\alpha\)</span></th>
+<th><span class="math inline">\(\beta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\alpha\)</span></td>
+<td>0, 0</td>
+<td>3, -1</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta\)</span></td>
+<td>-1, 3</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+<p>玩家1和玩家2都有两个策略<span class="math inline">\(\alpha\)</span>和<span class="math inline">\(\beta\)</span>。当玩家1选<span class="math inline">\(\alpha\)</span>，玩家2选<span class="math inline">\(\beta\)</span>时，单元格中的记录为（3, -1），即在这种策略选择下，玩家1收益+3，玩家2收益-1。</p>
 </blockquote>
 <h2 id="game1绩点博弈">Game1——绩点博弈</h2>
 <p><strong>游戏规则介绍</strong>： 两名玩家进行博弈，每人均有两种策略，<span class="math inline">\(\alpha\)</span>（内卷）或<span class="math inline">\(\beta\)</span>（躺平），收益矩阵如下：</p>
@@ -392,6 +420,8 @@
 <hr />
 <p>一个“Indignant angel”和一个“Evil git”的情况下，“Indignant angel”单从自身角度考虑问题是不能确定策略的，但如果能够考虑到对手有一个严格占优策略<span class="math inline">\(\alpha\)</span>，那么“Indignant angel”也就可以确定自己的策略应该选<span class="math inline">\(\alpha\)</span>。</p>
 <h2 id="总结">总结</h2>
+<p>收益矩阵在后续博弈中会频繁使用。</p>
+<hr />
 <p>囚徒困境在现实场景有很多对应，军备竞赛、关税战、广告战。不能指望通过玩家间的沟通来跳出困境，达成合作，因为合作并非纳什均衡点，在利益驱动下，每名玩家都有背叛的动机。囚徒困境和协调博弈有别，后者可以通过玩家间的协调达成合作。</p>
 <hr />
 <p>在有严格占优策略时，玩家肯定要选择严格占优策略。</p>
